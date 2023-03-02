@@ -57,37 +57,16 @@ This repository can be cloned into the root directory of the MPC Hub. Within the
 
 With MPC access as described above, a user has several options to begin creating their Random Convolutional Features (RCFs). An overview of the steps are as follows: 
 
-### Step 1 - Create a grid of points
+### Step 1 - Select a featurization notebook
 
-Use the `dense_grid.ipynb` to execute the following steps:
-
-- Create a uniform grid of points over the region of interest, or load a file containg the pre-produced latitude and longitude points to featurize 
-  - User selects a country or region and a grid will be created
-  - User can supply geometry or a country code can be specified to use the `geopandas` shapefiles
-  - For gridding the country of Zambia specifically, a user has two options: `equal angle` cells versus `equal area` grid cells
-    - `equal angle` grids are produced using the latitude/longitude geodetic coordinate reference system, EPSG 4326, which is based on Earth's center of mass
-      - results in each point representing a 0.01 by 0.01 degree grid cell that will be featurized 
-      - This is roughly 1 km<sup>2</sup> (exact area varies by geographic location)
-      - This means a pre-processed, user-supplied file should have points with a minimum distance of 0.01 degrees to avoid overlap
-    - `equal area` grids are produced using the local coordinate reference system for the region of interest
-      - The local EPSG for the country of Zambia is the defualt, but the relevant EPSG for another region of interest may be supplied by the user 
-
-### Step 2 - Select a featurization notebook
-
-The featurization notebooks are:
-
-- `rcf_multiband.ipynb` 
-  - For use with the `landsat-c2-l2` satellite collection or `sentinel-2-l2a`  
+The featurization notebooks are: 
 - `Sentinel_2_RGB.ipynb`
   - For use with `sentinel-2-l2a` in only the visible spectrum.
   - MUCH faster than other options 
-- `s2_l8_multiband.ipynb` 
-  -  For use with the `landsat-8-c2-l2` satellite collection or `sentinel-2-l2a`  
-  -  `landsat-8-c2-l2` is now deprecated in favor of the `landsat-c2-l2` collection
 
-### Step 3 - Select Options
+### Step 2 - Select Options
 
-Options include selecting a satellite collection, the number of features to produce, the spectral bands, select the time period. These options are selected in the `rcf_multiband.ipynb`, `Sentinel_2_RGB.ipynb`, or `s2_l8_multiband.ipynb` notebooks. 
+Options include selecting a satellite collection, the number of features to produce, the spectral bands, select the time period. All are selected in the `Sentinel2_RGB.ipynb` notebook. 
 
 - Select a satellite
   - `landsat-8-c2-l2`
@@ -144,8 +123,5 @@ There are many expansions and future research that could be contributed to this 
 
 ## Contributing
 
-The capstone project was completed on June 9th, 2022. Some team members will be continuing work in this field and the repositories are likely to stay active for some time to come. Suggestions for improvements to the code or documentation is welcome and encouraged. Please submit questions, comments, or code via issues or pull requests on either of the repositories. To correspond with the data scientists who produced these materials that extend the MOSAIKS approach, please see their personal GitHub accounts at the bottom of the organization's README and feel free to contact them via email.
-
 If you are interested in processing features for a new region other than Zambia and contributing these features to the [MOSAIKS API](https://nadar.gspp.berkeley.edu/home/index/?next=/portal/index/), please see the GitHub repository [here](https://github.com/calebrob6/mosaiks-api) and create a pull request or issue. Additionally, you can contact the authors of the [MOSAIKS paper](https://www.nature.com/articles/s41467-021-24638-z) with questions about the process.
 
-For rules and regulations for this organization, please see the [Code of Conduct](https://github.com/cropmosaiks/.github/blob/main/CODE_OF_CONDUCT.md)
