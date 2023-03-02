@@ -51,6 +51,7 @@ This repository can be cloned into the root directory of the MPC Hub. Within the
   </summary>
   <br>
   <a href="https://github.com/mosaiks-capstone/Featurization/blob/main/Sentinel2_RGB.ipynb">Sentinel2_RGB.ipynb</a>
+</details>
   
 ## Generalized Steps  
 
