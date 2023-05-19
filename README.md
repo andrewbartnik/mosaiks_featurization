@@ -60,13 +60,13 @@ With MPC access as described above, a user has several options to begin creating
 ### Step 1 - Select a featurization notebook
 
 The featurization notebooks are: 
-- `Sentinel_2_RGB.ipynb`
+- `sentinel_2_rgb.ipynb`
   - For use with `sentinel-2-l2a` in only the visible spectrum.
   - MUCH faster than other options 
 
 ### Step 2 - Select Options
 
-Options include selecting a satellite collection, the number of features to produce, the spectral bands, select the time period. All are selected in the `Sentinel2_RGB.ipynb` notebook. 
+Options include selecting a satellite collection, the number of features to produce, the spectral bands, select the time period. All are selected in the `sentinel2_rgb.ipynb` notebook. 
 
 - Select a satellite
   - `landsat-8-c2-l2`
