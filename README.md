@@ -63,6 +63,9 @@ The featurization notebooks are:
 - `sentinel_2_rgb.ipynb`
   - For use with `sentinel-2-l2a` in only the visible spectrum.
   - MUCH faster than other options 
+- `rcf_multiband.ipynb`
+  - Choose either satelite (landsat/sentinel)
+  - Choose bands
 
 ### Step 2 - Select Options
 
